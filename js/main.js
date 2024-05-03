@@ -5,30 +5,6 @@ var textsave = new Array(); // store all the input text from the user in an arra
 var numberOfElements; // number of current elements
 $(document).ready(function () {
 
-const userAgent = navigator.userAgent;
-
-// Check if the user is on a mobile device
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-
-// Check if the user is on an Android device
-const isAndroid = /Android/i.test(userAgent);
-
-// Check if the user is on an iOS device
-const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-
-// Display an alert based on the device type
-if (isMobile) {
-  if (isAndroid) {
-	alert("You are using an Android device");
-  } else if (isIOS) {
-	alert("You are using an iOS device");
-  } else {
-	alert("You are using a mobile device (other than Android or iOS)");
-  }
-} else {
-  alert("You are using a web browser");
-}
-
 	numberOfElements = ($('#myList li').length) - 2; // element lenght gets 2 substracted to account for header and add list elements
     $('#counter').text('# Of Elements: '+numberOfElements +''); // set the element on the dom.
 	
